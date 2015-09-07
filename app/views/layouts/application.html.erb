@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Sigmaplas1</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+
+	  
+	</head>
+
+	<body class="homepage">
+
+		<div id="header">
+						
+				<!-- Inner -->
+					<div class="inner">
+						<header>
+							<h1><a href="index.html" id="logo"><%= image_tag("logo.png", :alt => "rss feed") %></a></h1>
+							<hr />
+						</header>
+					</div>
+
+				<!-- Nav -->
+                    <nav id="nav1">
+                      <ul>
+                            <%= render 'layouts/navigation' %>
+                      </ul>
+                    </nav>		
+		</div>
+
+		
+		<%= yield %>
+
+		<%= render "layouts/footer" %>
+		
+	</body>
+</html>
